@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://hightechbrain.ml">
-  <title>高科技的指挥中心</title>
+  <title>Archives: 2023 | 高科技的指挥中心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="高科技的指挥中心">
-<meta property="og:url" content="https://hightechbrain.ml/index.html">
+<meta property="og:url" content="https://hightechbrain.ml/archives/2023/index.html">
 <meta property="og:site_name" content="高科技的指挥中心">
 <meta property="og:locale">
 <meta property="article:author" content="John Doe">
@@ -142,282 +142,47 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-搭建Hadoop" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/02/%E6%90%AD%E5%BB%BAHadoop/">搭建Hadoop</a>
-    </h1>
-  
-
-        
-        <a href="/2023/05/02/%E6%90%AD%E5%BB%BAHadoop/" class="archive-article-date">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2023" class="archive-year">2023</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2023/05/02/%E6%90%AD%E5%BB%BAHadoop/" class="archive-article-date">
   	<time datetime="2023-05-02T11:57:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-02</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、配置网络<br>    在终端中输入nmtui命令，更改网络设置。配置好网络后使用<br>    service network restart<br>    与宿主机互ping,如果互ping成功，就算完成<br>2、关闭防火墙<br>    systemctl state firewalld<br>    systemctl stop firewalld<br>    systemctl disable firewalld<br>3、安装配置JDK<br>创建文件夹（为了方便所有文件均改名）</p>
-<h1 id="rpm-qa-grep-openjdk"><a href="#rpm-qa-grep-openjdk" class="headerlink" title="rpm -qa |grep openjdk"></a>rpm -qa |grep openjdk</h1><p>java-1.7.0-openjdk-headless-1.7.0.261-2.6.22.2.el7_8.x86_64<br>java-1.8.0-openjdk-headless-1.8.0.262.b10-1.el7.x86_64<br>java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64<br>java-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8.x86_64</p>
-<h1 id="rpm-e-–nodeps-java-1-7-0-openjdk-headless-1-7-0-261-2-6-22-2-el7-8-x86-64"><a href="#rpm-e-–nodeps-java-1-7-0-openjdk-headless-1-7-0-261-2-6-22-2-el7-8-x86-64" class="headerlink" title="rpm -e –nodeps java-1.7.0-openjdk-headless-1.7.0.261-2.6.22.2.el7_8.x86_64"></a>rpm -e –nodeps java-1.7.0-openjdk-headless-1.7.0.261-2.6.22.2.el7_8.x86_64</h1><h1 id="rpm-e-–nodeps-java-1-8-0-openjdk-headless-1-8-0-262-b10-1-el7-x86-64"><a href="#rpm-e-–nodeps-java-1-8-0-openjdk-headless-1-8-0-262-b10-1-el7-x86-64" class="headerlink" title="rpm -e –nodeps java-1.8.0-openjdk-headless-1.8.0.262.b10-1.el7.x86_64"></a>rpm -e –nodeps java-1.8.0-openjdk-headless-1.8.0.262.b10-1.el7.x86_64</h1><h1 id="rpm-e-–nodeps-java-1-8-0-openjdk-1-8-0-262-b10-1-el7-x86-64"><a href="#rpm-e-–nodeps-java-1-8-0-openjdk-1-8-0-262-b10-1-el7-x86-64" class="headerlink" title="rpm -e –nodeps java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64"></a>rpm -e –nodeps java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64</h1><h1 id="rpm-e-–nodeps-java-1-7-0-openjdk-1-7-0-261-2-6-22-2-el7-8-x86-64"><a href="#rpm-e-–nodeps-java-1-7-0-openjdk-1-7-0-261-2-6-22-2-el7-8-x86-64" class="headerlink" title="rpm -e –nodeps java-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8.x86_64"></a>rpm -e –nodeps java-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8.x86_64</h1><h1 id="rpm-qa-grep-openjdk-1"><a href="#rpm-qa-grep-openjdk-1" class="headerlink" title="rpm -qa |grep openjdk"></a>rpm -qa |grep openjdk</h1><h1 id="tar-zxvf-jdk-8u211-linux-x64-tar-gz-C-x2F-opt-x2F-programs-x2F"><a href="#tar-zxvf-jdk-8u211-linux-x64-tar-gz-C-x2F-opt-x2F-programs-x2F" class="headerlink" title="tar -zxvf jdk-8u211-linux-x64.tar.gz -C &#x2F;opt&#x2F;programs&#x2F;"></a>tar -zxvf jdk-8u211-linux-x64.tar.gz -C &#x2F;opt&#x2F;programs&#x2F;</h1><p>修改profile文件</p>
-<h1 id="vim-x2F-etc-x2F-profile"><a href="#vim-x2F-etc-x2F-profile" class="headerlink" title="vim &#x2F;etc&#x2F;profile"></a>vim &#x2F;etc&#x2F;profile</h1><p>添加以下语句<br>    export JAVA_HOME&#x3D;&#x2F;opt&#x2F;programs&#x2F;jdk<br>    export PATH&#x3D;$PATH:$JAVA_HOME&#x2F;bin</p>
-<h1 id="source-x2F-etc-x2F-profile"><a href="#source-x2F-etc-x2F-profile" class="headerlink" title="source &#x2F;etc&#x2F;profile"></a>source &#x2F;etc&#x2F;profile</h1><p>修改host文件</p>
-<h1 id="vim-x2F-etc-x2F-hosts"><a href="#vim-x2F-etc-x2F-hosts" class="headerlink" title="vim &#x2F;etc&#x2F;hosts"></a>vim &#x2F;etc&#x2F;hosts</h1><pre><code>192.168.165.11 hadoop0
-</code></pre>
-<p>SSH登录</p>
-<h1 id="ssh-keygen"><a href="#ssh-keygen" class="headerlink" title="ssh-keygen"></a>ssh-keygen</h1><p>复制</p>
-<h1 id="ssh-copy-id-hadoop0"><a href="#ssh-copy-id-hadoop0" class="headerlink" title="ssh-copy-id hadoop0"></a>ssh-copy-id hadoop0</h1><p>[root@hadoop01 ~]# hadoop-daemon.sh start journalnode<br>starting journalnode, logging to &#x2F;opt&#x2F;programs&#x2F;hadoop&#x2F;logs&#x2F;hadoop-root-journalnode-hadoop01.out<br>export JAVA_HOME&#x3D;&#x2F;opt&#x2F;programs&#x2F;jdk<br>export PATH&#x3D;$PATH:$JAVA_HOME&#x2F;bin<br>export ZOOKEEPER_HOME&#x3D;&#x2F;opt&#x2F;programs&#x2F;zookeeper<br>export PATH&#x3D;$PATH:$ZOOKEEPER_HOME&#x2F;bin<br>export HADOOP_HOME&#x3D;&#x2F;opt&#x2F;programs&#x2F;hadoop<br>export PATH&#x3D;$PATH:$HADOOP_HOME&#x2F;bin:$HADOOP_HOME&#x2F;sbin</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/02/%E6%90%AD%E5%BB%BAHadoop/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-建站感言" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/10/24/%E5%BB%BA%E7%AB%99%E6%84%9F%E8%A8%80/">建站感言</a>
+      <a class="archive-article-title" href="/2023/05/02/%E6%90%AD%E5%BB%BAHadoop/">搭建Hadoop</a>
     </h1>
   
 
-        
-        <a href="/2022/10/24/%E5%BB%BA%E7%AB%99%E6%84%9F%E8%A8%80/" class="archive-article-date">
-  	<time datetime="2022-10-24T09:23:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  今天，把博客建的差不多了。不过还有一些功能，还要等到后期完善。</p>
-<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>  当时和鱼鱼（lz差不多是条咸鱼）见面，他就有一个完美的博客。于是，我就想搭建一个个人博客。</p>
-<h1 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h1><p>  我采用的是Hexo来搭建的，在这个过程中出现了很多问题，不过也解决了。 </p>
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/10/24/%E5%BB%BA%E7%AB%99%E6%84%9F%E8%A8%80/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/10/05/test/">test</a>
-    </h1>
-  
-
-        
-        <a href="/2022/10/05/test/" class="archive-article-date">
-  	<time datetime="2022-10-05T04:03:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>test</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/10/05/test/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/10/04/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2022/10/04/hello-world/" class="archive-article-date">
-  	<time datetime="2022-10-04T15:23:22.053Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/10/04/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -439,9 +204,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
