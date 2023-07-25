@@ -6,7 +6,7 @@
   <link href="https://blog.hightechbrain.net/atom.xml" rel="self"/>
   
   <link href="https://blog.hightechbrain.net/"/>
-  <updated>2023-07-25T03:05:25.516Z</updated>
+  <updated>2023-07-25T03:19:55.354Z</updated>
   <id>https://blog.hightechbrain.net/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.hightechbrain.net/2023/07/25/pictest/"/>
     <id>https://blog.hightechbrain.net/2023/07/25/pictest/</id>
     <published>2023-07-25T04:03:08.000Z</published>
-    <updated>2023-07-25T03:05:25.516Z</updated>
+    <updated>2023-07-25T03:19:55.354Z</updated>
     
     
       
@@ -34,10 +34,10 @@
     
     
     
-    <category term="-测试" scheme="https://blog.hightechbrain.net/categories/%E6%B5%8B%E8%AF%95/"/>
+    <category term="测试" scheme="https://blog.hightechbrain.net/categories/%E6%B5%8B%E8%AF%95/"/>
     
     
-    <category term="-test" scheme="https://blog.hightechbrain.net/tags/test/"/>
+    <category term="test" scheme="https://blog.hightechbrain.net/tags/test/"/>
     
   </entry>
   
